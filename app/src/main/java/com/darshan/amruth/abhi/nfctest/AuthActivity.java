@@ -1,6 +1,8 @@
 package com.darshan.amruth.abhi.nfctest;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -17,21 +19,29 @@ import com.facebook.login.widget.LoginButton;
 public class AuthActivity extends AppCompatActivity {
 
     CallbackManager callbackManager;
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_auth);
+        preferences = getSharedPreferences("SignIn", Context.MODE_PRIVATE);
+        editor = preferences.edit();
         LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions("user_friends");
         callbackManager = CallbackManager.Factory.create();
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
+                String id = loginResult.getAccessToken().getUserId();
+                Toast.makeText(getApplicationContext(),"logged in with user id "+id,Toast.LENGTH_SHORT).show();
+                editor.putInt(SplashActivity.LOGGED_IN,1);
+                editor.apply();
                 Intent in = new Intent(AuthActivity.this,HousesActivity.class);
                 startActivity(in);
+                finish();
             }
 
             @Override

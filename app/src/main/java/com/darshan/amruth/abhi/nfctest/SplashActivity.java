@@ -13,13 +13,15 @@ import android.os.Bundle;
 
 public class SplashActivity extends AppCompatActivity {
 
+    public static String LOGGED_IN = "LoggedIn";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
         SharedPreferences sharedPreferences = getSharedPreferences("SignIn", Context.MODE_PRIVATE);
-        int check = sharedPreferences.getInt("Yes", 0);
+        int check = sharedPreferences.getInt(LOGGED_IN, 0);
 
         if (!haveNetworkConnection()) {
             callDialog();
