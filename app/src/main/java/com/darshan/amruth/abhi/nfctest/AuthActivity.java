@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.widget.Toast;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -22,29 +23,28 @@ public class AuthActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
-
+        LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
+        loginButton.setReadPermissions("user_friends");
         FacebookSdk.sdkInitialize(getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-
+                Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onCancel() {
+                Toast.makeText(getApplicationContext(),"cancel",Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void onError(FacebookException error) {
+                Toast.makeText(getApplicationContext(),"error",Toast.LENGTH_SHORT).show();
 
             }
         });
-
-        LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
-        loginButton.setReadPermissions("user_friends");
-
 
 
     }
