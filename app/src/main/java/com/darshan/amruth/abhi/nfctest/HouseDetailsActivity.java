@@ -1,11 +1,13 @@
 package com.darshan.amruth.abhi.nfctest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -17,6 +19,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class HouseDetailsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    TextView price, category, address,address2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,8 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        setUp();
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mapSmall);
@@ -38,6 +44,21 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    private void setUp() {
+
+        price = (TextView) findViewById(R.id.money);
+        category = (TextView) findViewById(R.id.category);
+        address = (TextView) findViewById(R.id.addr);
+        address2 = (TextView) findViewById(R.id.addressTv2);
+        Intent in = getIntent();
+        int pos = in.getIntExtra("position",0);
+
+        price.setText("Rs."+fetchData.dataList.get(pos).price);
+        category.setText(fetchData.dataList.get(pos).category);
+        address.setText(fetchData.dataList.get(pos).address);
+        address2.setText(fetchData.dataList.get(pos).address);
     }
 
     @Override
