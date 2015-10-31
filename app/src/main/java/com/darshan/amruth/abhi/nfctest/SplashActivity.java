@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Handler;
 import android.provider.Settings;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -20,22 +21,36 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("SignIn", Context.MODE_PRIVATE);
-        int check = sharedPreferences.getInt(LOGGED_IN, 0);
+        new Handler().postDelayed(new Runnable() {
 
-        if (!haveNetworkConnection()) {
-            callDialog();
-        } else {
-            if (check == 0) {
-                Intent i = new Intent(getApplicationContext(), AuthActivity.class);
-                startActivity(i);
-                finish();
-            } else {
-                Intent i = new Intent(getApplicationContext(), HousesActivity.class);
-                startActivity(i);
+            /*
+             * Showing splash screen with a timer. This will be useful when you
+             * want to show case your app logo / company
+             */
+
+            @Override
+            public void run() {
+                SharedPreferences sharedPreferences = getSharedPreferences("SignIn", Context.MODE_PRIVATE);
+                int check = sharedPreferences.getInt(LOGGED_IN, 0);
+
+                if (!haveNetworkConnection()) {
+                    callDialog();
+                } else {
+                    if (check == 0) {
+                        Intent i = new Intent(getApplicationContext(), AuthActivity.class);
+                        startActivity(i);
+                        finish();
+                    } else {
+                        Intent i = new Intent(getApplicationContext(), HousesActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
+                }
+
+                // close this activity
                 finish();
             }
-        }
+        }, 3000);
     }
 
     private boolean haveNetworkConnection() {
