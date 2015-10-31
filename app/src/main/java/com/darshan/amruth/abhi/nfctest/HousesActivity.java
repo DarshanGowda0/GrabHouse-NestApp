@@ -8,11 +8,15 @@ import android.support.v7.widget.RecyclerView;
 public class HousesActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
+    public static RecyclerViewAdapter recyclerViewAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_houses);
+
+        new fetchData(HousesActivity.this).execute("http://84.200.84.218:3000/get_prop");
 
         //set up recycler view
         setUpRecView();
@@ -25,8 +29,12 @@ public class HousesActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recView);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(HousesActivity.this);
-        recyclerView.setAdapter(recyclerViewAdapter);
+        recyclerViewAdapter = new RecyclerViewAdapter(HousesActivity.this);
+        try {
+            recyclerView.setAdapter(recyclerViewAdapter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 }

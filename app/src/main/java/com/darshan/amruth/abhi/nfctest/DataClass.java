@@ -5,6 +5,6 @@ package com.darshan.amruth.abhi.nfctest;
  */
 public class DataClass {
 
-    String image,price,rating,address,category;
+    String id,image,price,rating,address,category;
 
 }
