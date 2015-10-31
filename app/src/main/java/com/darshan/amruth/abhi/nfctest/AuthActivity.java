@@ -5,16 +5,23 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class AuthActivity extends AppCompatActivity {
 
@@ -47,6 +54,7 @@ public class AuthActivity extends AppCompatActivity {
                 //start next activity
                 Intent in = new Intent(AuthActivity.this, HousesActivity.class);
                 startActivity(in);
+                callGraph(loginResult.getAccessToken());
                 finish();
             }
 
@@ -65,6 +73,49 @@ public class AuthActivity extends AppCompatActivity {
 
 
     }
+
+    private void callGraph(AccessToken accessToken) {
+        GraphRequest request = GraphRequest.newMeRequest(
+                accessToken,
+                new GraphRequest.GraphJSONObjectCallback() {
+                    @Override
+                    public void onCompleted(
+                            JSONObject object,
+                            GraphResponse response) {
+                        // Application code
+                        parseResponse(response);
+                    }
+                });
+        Bundle parameters = new Bundle();
+        parameters.putString("fields", "id,name,link");
+        request.setParameters(parameters);
+        request.executeAsync();
+    }
+
+    private void parseResponse(GraphResponse response) {
+        try {
+            Log.d("drahsn",""+response);
+
+            JSONObject graphObject = response.getJSONObject();
+
+
+
+            String id, name, link;
+            id = graphObject.getString("id");
+            name = graphObject.getString("name");
+            link = graphObject.getString("link");
+
+            editor.putString("id",id);
+            editor.putString("name",name);
+            editor.putString("link",link);
+            editor.apply();
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
