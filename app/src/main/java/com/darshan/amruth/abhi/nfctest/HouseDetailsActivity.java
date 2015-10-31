@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -15,11 +16,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class HouseDetailsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     TextView price, category, address,address2;
+    ImageView houseImage;
 
 
     @Override
@@ -52,6 +55,7 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
         category = (TextView) findViewById(R.id.category);
         address = (TextView) findViewById(R.id.addr);
         address2 = (TextView) findViewById(R.id.addressTv2);
+        houseImage = (ImageView) findViewById(R.id.houseImageBig);
         Intent in = getIntent();
         int pos = in.getIntExtra("position",0);
 
@@ -59,6 +63,8 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
         category.setText(fetchData.dataList.get(pos).category);
         address.setText(fetchData.dataList.get(pos).address);
         address2.setText(fetchData.dataList.get(pos).address);
+        ImageLoader imageLoader = ImageLoader.getInstance();
+        imageLoader.displayImage("http://84.200.84.218/grab/images/"+fetchData.dataList.get(pos).image,houseImage,RecyclerViewAdapter.defaultOptions);
     }
 
     @Override

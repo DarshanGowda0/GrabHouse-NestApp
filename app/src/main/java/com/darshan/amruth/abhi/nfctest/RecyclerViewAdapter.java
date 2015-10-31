@@ -27,7 +27,7 @@ import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListene
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Holder> {
 
     Context context;
-    DisplayImageOptions defaultOptions;
+    public static DisplayImageOptions defaultOptions;
     ImageLoaderConfiguration config;
     ImageLoader imageLoader;
 
@@ -80,14 +80,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.addressTv.setText(fetchData.dataList.get(position).address);
         holder.categoryTv.setText(fetchData.dataList.get(position).category);
 //        imageLoader.displayImage(fetchData.dataList.get(position).image, (ImageAware) holder.imageLayout, defaultOptions);
-//        imageLoader.loadImage(fetchData.dataList.get(position).image, new SimpleImageLoadingListener() {
-//            @Override
-//            public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-//                // Do whatever you want with Bitmap
-//                Drawable drawable = new BitmapDrawable(loadedImage);
-//                holder.imageLayout.setBackground(drawable);
-//            }
-//        });
+        imageLoader.loadImage("http://84.200.84.218/grab/images/"+fetchData.dataList.get(position).image, new SimpleImageLoadingListener() {
+            @Override
+            public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
+                // Do whatever you want with Bitmap
+                Drawable drawable = new BitmapDrawable(loadedImage);
+                holder.imageLayout.setBackground(drawable);
+            }
+        });
     }
 
     @Override
