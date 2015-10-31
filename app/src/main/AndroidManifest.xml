@@ -43,17 +43,16 @@
         <activity android:name=".HousesActivity" >
         </activity>
         <activity android:name=".SplashActivity" >
-
-        </activity>
-        <activity
-            android:name=".HouseDetailsActivity"
-            android:label="@string/title_activity_house_details"
-            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".HouseDetailsActivity"
+            android:label="@string/title_activity_house_details"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>
 
