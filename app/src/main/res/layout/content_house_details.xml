@@ -243,7 +243,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="No Restrictions"
+                            android:text="None"
                             android:textColor="@color/cus_black"
                             android:textSize="20sp" />
                     </LinearLayout>
@@ -318,10 +318,29 @@
             android:layout_margin="5dp"
             card_view:cardCornerRadius="4dp">
 
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/large_text" />
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addressTv2"
+                    android:layout_margin="5dp"
+                    android:text="Address will be displayed here" />
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/mapSmall"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/addressTv2"
+                    tools:context="com.darshan.amruth.abhi.nfctest.MapsActivity" />
+
+
+            </RelativeLayout>
+
 
         </android.support.v7.widget.CardView>
 
@@ -334,10 +353,6 @@
             android:layout_margin="5dp"
             card_view:cardCornerRadius="4dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/large_text" />
 
         </android.support.v7.widget.CardView>
 
@@ -362,11 +377,4 @@
 
 </android.support.v4.widget.NestedScrollView>
 
-    <!--
-    
-    <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/text_margin"
-    android:text="@string/large_text" />
-    -->
+
