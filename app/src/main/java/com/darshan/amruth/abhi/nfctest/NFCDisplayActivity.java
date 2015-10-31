@@ -7,6 +7,7 @@ import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by mshrestha on 7/23/2014.
@@ -31,7 +32,8 @@ public class NFCDisplayActivity extends Activity {
                     NfcAdapter.EXTRA_NDEF_MESSAGES);
 
             NdefMessage message = (NdefMessage) rawMessages[0]; // only one message transferred
-            mTextView.setText(new String(message.getRecords()[0].getPayload()));
+//            mTextView.setText("this is darshan testing"+new String(message.getRecords()[0].getPayload()));
+            Toast.makeText(getApplicationContext(),""+new String(message.getRecords()[0].getPayload()),Toast.LENGTH_SHORT).show();
 
         } else
             mTextView.setText("Waiting for NDEF Message");
