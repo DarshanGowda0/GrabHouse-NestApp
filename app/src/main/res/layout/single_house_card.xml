@@ -22,7 +22,6 @@
                 android:layout_height="200dp"
                 android:background="@drawable/download">
 
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -54,9 +53,9 @@
                     android:layout_height="wrap_content"
                     android:text="2 BHK Unfurnished"
                     android:id="@+id/detail"
-                    android:textColor="@color/cus_grey"
-                    android:layout_margin="2dp"
-                    android:textSize="20dp"
+                    android:textColor="@color/cus_dgrey"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
                     android:textIsSelectable="false" />
 
                 <TextView
@@ -65,20 +64,31 @@
                     android:id="@+id/address"
                     android:text="#83, Banashankari Nivas,\nBrindavan Layout, Subramanyapura,\nNear SKCH PU College"
                     android:layout_below="@+id/detail"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:textSize="12sp" />
+                    android:textColor="@color/cus_lgrey"
+                    android:layout_margin="5dp"
+                    android:textSize="12dp" />
 
-                <TextView
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/rating"
-                    android:text="4.5"
-                    android:textSize="20sp"
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/rating_border"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rating"
+                        android:text="4.5"
+                        android:textSize="14dp"
+                        android:textColor="@color/cus_lblue" />
+
+                </RelativeLayout>
 
             </RelativeLayout>
 
