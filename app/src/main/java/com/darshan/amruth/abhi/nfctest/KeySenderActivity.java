@@ -6,20 +6,18 @@ import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
 import android.nfc.NfcEvent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class NFCActivity extends Activity implements NfcAdapter.CreateNdefMessageCallback {
+public class KeySenderActivity extends Activity implements NfcAdapter.CreateNdefMessageCallback {
 
     private EditText mEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nfc);
+        setContentView(R.layout.activity_key_sender);
         mEditText = (EditText) findViewById(R.id.edit_text_field);
 
         NfcAdapter mAdapter = NfcAdapter.getDefaultAdapter(this);

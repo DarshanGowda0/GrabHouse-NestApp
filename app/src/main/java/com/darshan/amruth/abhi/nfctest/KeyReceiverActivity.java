@@ -6,18 +6,19 @@ import android.nfc.NdefMessage;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-public class NFCDisplayActivity extends Activity {
+public class KeyReceiverActivity extends Activity {
 
     private ImageView keyStatus;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nfc_display);
+        setContentView(R.layout.activity_key_receiver);
 
         keyStatus = (ImageView) findViewById(R.id.image_keyStatus);
         keyStatus.setImageResource(R.drawable.lock);
@@ -32,9 +33,7 @@ public class NFCDisplayActivity extends Activity {
                     NfcAdapter.EXTRA_NDEF_MESSAGES);
 
             NdefMessage message = (NdefMessage) rawMessages[0];
-            keyStatus.setImageResource(R.drawable.lock);
-
-            Toast.makeText(getApplicationContext(),""+new String(message.getRecords()[0].getPayload()),Toast.LENGTH_SHORT).show();
+            keyStatus.setImageResource(R.drawable.lock_open);
         } else
             Log.d("Waiting: ","For NDEF Message");
 

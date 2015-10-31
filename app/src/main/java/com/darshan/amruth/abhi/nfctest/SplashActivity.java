@@ -40,17 +40,19 @@ public class SplashActivity extends AppCompatActivity {
                         Intent i = new Intent(getApplicationContext(), AuthActivity.class);
                         startActivity(i);
                         finish();
+                        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     } else {
                         Intent i = new Intent(getApplicationContext(), HousesActivity.class);
                         startActivity(i);
                         finish();
+                        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     }
                 }
 
                 // close this activity
                 finish();
             }
-        }, 3000);
+        }, 2000);
     }
 
     private boolean haveNetworkConnection() {
