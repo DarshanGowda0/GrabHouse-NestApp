@@ -2,6 +2,9 @@ package com.darshan.amruth.abhi.nfctest;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +19,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.SimpleBitmapDisplayer;
 import com.nostra13.universalimageloader.core.imageaware.ImageAware;
+import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
 /**
  * Created by darshan on 31/10/15.
@@ -68,14 +72,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         setData(holder,position);
     }
 
-    private void setData(Holder holder, int position) {
+    private void setData(final Holder holder, int position) {
 
         holder.priceTv.setText("Rs."+fetchData.dataList.get(position).price);
         holder.ratingTv.setText(fetchData.dataList.get(position).rating);
         holder.addressTv.setText(fetchData.dataList.get(position).address);
         holder.categoryTv.setText(fetchData.dataList.get(position).category);
 //        imageLoader.displayImage(fetchData.dataList.get(position).image, (ImageAware) holder.imageLayout, defaultOptions);
-
+//        imageLoader.loadImage(fetchData.dataList.get(position).image, new SimpleImageLoadingListener() {
+//            @Override
+//            public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
+//                // Do whatever you want with Bitmap
+//                Drawable drawable = new BitmapDrawable(loadedImage);
+//                holder.imageLayout.setBackground(drawable);
+//            }
+//        });
     }
 
     @Override
