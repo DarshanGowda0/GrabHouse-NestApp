@@ -31,6 +31,8 @@ public class AuthActivity extends AppCompatActivity {
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_SHORT).show();
+                Intent in = new Intent(AuthActivity.this,HousesActivity.class);
+                startActivity(in);
             }
 
             @Override
