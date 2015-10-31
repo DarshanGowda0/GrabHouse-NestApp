@@ -27,32 +27,38 @@ public class AuthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_auth);
+
         preferences = getSharedPreferences("SignIn", Context.MODE_PRIVATE);
         editor = preferences.edit();
+
         LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions("user_friends");
         callbackManager = CallbackManager.Factory.create();
+
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
+
                 String id = loginResult.getAccessToken().getUserId();
-                Toast.makeText(getApplicationContext(),"logged in with user id "+id,Toast.LENGTH_SHORT).show();
-                editor.putInt(SplashActivity.LOGGED_IN,1);
+                Toast.makeText(getApplicationContext(), "logged in with user id " + id, Toast.LENGTH_SHORT).show();
+                //commit to shared preferences
+                editor.putInt(SplashActivity.LOGGED_IN, 1);
                 editor.apply();
-                Intent in = new Intent(AuthActivity.this,HousesActivity.class);
+                //start next activity
+                Intent in = new Intent(AuthActivity.this, HousesActivity.class);
                 startActivity(in);
                 finish();
             }
 
             @Override
             public void onCancel() {
-                Toast.makeText(getApplicationContext(),"cancel",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "cancel", Toast.LENGTH_SHORT).show();
 
             }
 
             @Override
             public void onError(FacebookException error) {
-                Toast.makeText(getApplicationContext(),"error",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
 
             }
         });
