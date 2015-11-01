@@ -5,10 +5,16 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import jp.wasabeef.recyclerview.animators.adapters.AlphaInAnimationAdapter;
+import jp.wasabeef.recyclerview.animators.adapters.ScaleInAnimationAdapter;
+import jp.wasabeef.recyclerview.animators.adapters.SlideInBottomAnimationAdapter;
+import jp.wasabeef.recyclerview.animators.adapters.SlideInLeftAnimationAdapter;
+
 public class HousesActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     public static RecyclerViewAdapter recyclerViewAdapter;
+    public static ScaleInAnimationAdapter slideInBottomAnimationAdapter;
 
 
     @Override
@@ -30,8 +36,9 @@ public class HousesActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerViewAdapter = new RecyclerViewAdapter(HousesActivity.this);
+        slideInBottomAnimationAdapter = new ScaleInAnimationAdapter(recyclerViewAdapter);
         try {
-            recyclerView.setAdapter(recyclerViewAdapter);
+            recyclerView.setAdapter(slideInBottomAnimationAdapter);
         } catch (Exception e) {
             e.printStackTrace();
         }
