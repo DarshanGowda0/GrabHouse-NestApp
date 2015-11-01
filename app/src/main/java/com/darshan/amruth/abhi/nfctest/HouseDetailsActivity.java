@@ -1,10 +1,12 @@
 package com.darshan.amruth.abhi.nfctest;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,6 +27,7 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
     private GoogleMap mMap;
     TextView price, category, address, address2;
     ImageView houseImage;
+    CardView cardView;
     int pos;
 
 
@@ -61,6 +64,15 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
         houseImage = (ImageView) findViewById(R.id.houseImageBig);
         Intent in = getIntent();
         pos = in.getIntExtra("position", 0);
+        cardView = (CardView) findViewById(R.id.card_view6);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri number = Uri.parse("tel:9742934099");
+                Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
+                startActivity(callIntent);
+            }
+        });
 
         String rentCost = "\u20B9" + fetchData.dataList.get(pos).price;
         price.setText(rentCost);
