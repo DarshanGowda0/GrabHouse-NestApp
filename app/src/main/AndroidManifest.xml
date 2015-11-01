@@ -36,8 +36,9 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-        <activity android:name=".AuthActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".AuthActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 
         <meta-data
@@ -51,7 +52,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name=".HousesActivity"
-            android:label="Houses on Rent">
+            android:label="Houses on Rent" >
         </activity>
         <activity
             android:name=".SplashActivity"
@@ -83,6 +84,8 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" >
+        </activity>
+        <activity android:name=".RecieveKeyListener" >
         </activity>
     </application>
 

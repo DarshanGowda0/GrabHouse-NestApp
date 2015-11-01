@@ -6,6 +6,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,7 +23,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 public class HouseDetailsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    TextView price, category, address,address2;
+    TextView price, category, address, address2;
     ImageView houseImage;
     int pos;
 
@@ -44,7 +46,7 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new requestKey(HouseDetailsActivity.this,fetchData.dataList.get(pos).id,view).execute();
+                new requestKey(HouseDetailsActivity.this, fetchData.dataList.get(pos).id, view).execute();
 
             }
         });
@@ -58,7 +60,7 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
         address2 = (TextView) findViewById(R.id.addressTv2);
         houseImage = (ImageView) findViewById(R.id.houseImageBig);
         Intent in = getIntent();
-        pos = in.getIntExtra("position",0);
+        pos = in.getIntExtra("position", 0);
 
         String rentCost = "\u20B9" + fetchData.dataList.get(pos).price;
         price.setText(rentCost);
@@ -66,7 +68,7 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
         address.setText(fetchData.dataList.get(pos).address);
         address2.setText(fetchData.dataList.get(pos).address);
         ImageLoader imageLoader = ImageLoader.getInstance();
-        imageLoader.displayImage("http://84.200.84.218/grab/images/"+fetchData.dataList.get(pos).image,houseImage,RecyclerViewAdapter.defaultOptions);
+        imageLoader.displayImage("http://84.200.84.218/grab/imagesa/" + fetchData.dataList.get(pos).image, houseImage, RecyclerViewAdapter.defaultOptions);
     }
 
     @Override
@@ -79,5 +81,26 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(sydney, 12.0f));
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            Intent in = new Intent(HouseDetailsActivity.this,RecieveKeyListener.class);
+            startActivity(in);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
