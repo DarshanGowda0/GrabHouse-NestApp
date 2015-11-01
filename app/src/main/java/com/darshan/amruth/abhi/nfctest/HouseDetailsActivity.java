@@ -96,12 +96,11 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent in = new Intent(HouseDetailsActivity.this,RecieveKeyListener.class);
+            Intent in = new Intent(HouseDetailsActivity.this, RecieveKeyListener.class);
             startActivity(in);
-            return true;
         }
-        if(id==R.id.open){
-            Intent in = new Intent(HouseDetailsActivity.this,KeySenderActivity.class);
+        if (id == R.id.open) {
+            Intent in = new Intent(HouseDetailsActivity.this, KeySenderActivity.class);
             startActivity(in);
             return true;
         }

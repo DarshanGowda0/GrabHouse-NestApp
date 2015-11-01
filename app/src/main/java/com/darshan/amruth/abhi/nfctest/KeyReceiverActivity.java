@@ -48,8 +48,9 @@ public class KeyReceiverActivity extends Activity {
                     NfcAdapter.EXTRA_NDEF_MESSAGES);
 
             NdefMessage message = (NdefMessage) rawMessages[0];
-            RecievedString =message.toString();
-            keyStatus.setImageResource(R.drawable.lock_open);
+            RecievedString = new String(message.getRecords()[0].getPayload());
+//            keyStatus.setImageResource(R.drawable.lock_open);
+            new checkCorrectness().execute();
         } else
             Log.d("Waiting: ","For NDEF Message");
 
@@ -136,6 +137,9 @@ public class KeyReceiverActivity extends Activity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
+
+            Log.d("darshan","rec-"+RecievedString+" fetch-"+passcode);
+
             if(RecievedString.equals(""+passcode)){
                 keyStatus.setImageResource(R.drawable.lock_open);
                 Toast.makeText(getApplicationContext(),"lock opened successfully",Toast.LENGTH_SHORT).show();
