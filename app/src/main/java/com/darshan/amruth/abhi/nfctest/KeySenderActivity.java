@@ -7,6 +7,7 @@ import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
 import android.nfc.NfcEvent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -43,10 +44,12 @@ public class KeySenderActivity extends Activity implements NfcAdapter.CreateNdef
      */
     @Override
     public NdefMessage createNdefMessage(NfcEvent nfcEvent) {
-        String message = mEditText.getText().toString();
+//        String message = mEditText.getText().toString();
+
         String msg = sharedPreferences.getString("passcode","");
         NdefRecord ndefRecord = NdefRecord.createMime("text/plain", msg.getBytes());
         NdefMessage ndefMessage = new NdefMessage(ndefRecord);
+        Log.d("nandhan",msg+" is going");
         return ndefMessage;
     }
 }

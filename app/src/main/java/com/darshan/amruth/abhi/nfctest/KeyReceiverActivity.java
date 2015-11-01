@@ -42,6 +42,8 @@ public class KeyReceiverActivity extends Activity {
     @Override
     protected void onResume(){
         super.onResume();
+        Log.d("nandhan ", "insidee");
+
         Intent intent = getIntent();
         if (NfcAdapter.ACTION_NDEF_DISCOVERED.equals(intent.getAction())) {
             Parcelable[] rawMessages = intent.getParcelableArrayExtra(
