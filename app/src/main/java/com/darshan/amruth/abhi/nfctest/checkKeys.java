@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -25,19 +26,16 @@ import java.util.ArrayList;
 public class checkKeys extends AsyncTask<String, Void, Boolean> {
 
     Context context;
-    TextView tv;
+    ImageView keyStatus;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
-    public checkKeys(Context con,TextView tv) {
-        this.tv = tv;
+    public checkKeys(Context con, ImageView keyStatus) {
+        this.keyStatus = keyStatus;
         context = con;
         sharedPreferences = context.getSharedPreferences("SignIn",Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
     }
-
-//    ProgressDialog progressDialog;
-
 
     @Override
     protected void onPreExecute() {
@@ -55,8 +53,7 @@ public class checkKeys extends AsyncTask<String, Void, Boolean> {
     @Override
     protected void onPostExecute(Boolean aBoolean) {
         super.onPostExecute(aBoolean);
-//        progressDialog.dismiss();
-        tv.setText("");
+        keyStatus.setImageResource(R.drawable.key_received);
     }
 
 
