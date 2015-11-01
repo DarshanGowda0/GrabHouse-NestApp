@@ -562,7 +562,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/profile_photo_1"/>
+                        android:src="@drawable/profile_photo_2"/>
 
                     <TextView
                         android:id="@+id/comment2"
@@ -597,7 +597,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center_vertical"
-                        android:src="@drawable/profile_photo_1"/>
+                        android:src="@drawable/profile_photo_3"/>
 
                     <TextView
                         android:id="@+id/comment3"
