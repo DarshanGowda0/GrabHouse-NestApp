@@ -11,4 +11,7 @@
 
     <color name="cus_lblue">#4b73d8</color>
     <color name="cus_blue">#1d46ae</color>
+
+    <color name="gradient_start">#0FFF</color>
+    <color name="gradient_end">#000</color>
 </resources>

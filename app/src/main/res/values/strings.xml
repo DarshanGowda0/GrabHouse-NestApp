@@ -29,4 +29,6 @@
     </string>
     <string name="lock_status">Key Lock Status</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="Rs">\u20B9</string>
 </resources>

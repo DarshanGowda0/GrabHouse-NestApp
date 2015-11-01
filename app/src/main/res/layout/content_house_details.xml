@@ -33,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="Rs.20000"
+                    android:text="\u20B9 20000"
                     android:textColor="@color/cus_black"
                     android:textSize="30dp" />
 
@@ -400,13 +400,62 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Photos"
-                    android:textSize="20sp"/>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/indoor_image_1"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/indoor_image_2"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/indoor_image_3"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/indoor_image_4"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="160dp"
+                            android:layout_height="120dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/indoor_image_5"
+                            android:scaleType="centerCrop"/>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
 
             </RelativeLayout>
 
