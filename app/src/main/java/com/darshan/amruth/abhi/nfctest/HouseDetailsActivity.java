@@ -60,7 +60,8 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
         Intent in = getIntent();
         pos = in.getIntExtra("position",0);
 
-        price.setText("Rs."+fetchData.dataList.get(pos).price);
+        String rentCost = "\u20B9" + fetchData.dataList.get(pos).price;
+        price.setText(rentCost);
         category.setText(fetchData.dataList.get(pos).category);
         address.setText(fetchData.dataList.get(pos).address);
         address2.setText(fetchData.dataList.get(pos).address);

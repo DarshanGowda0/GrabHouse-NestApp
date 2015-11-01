@@ -35,28 +35,17 @@
                     android:layout_margin="5dp"
                     android:text="\u20B9 20000"
                     android:textColor="@color/cus_black"
-                    android:textSize="30dp" />
-
-                <View
-                    android:id="@+id/border2"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_below="@+id/money"
-                    android:background="@color/cus_grey"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp" />
+                    android:textSize="35dp" />
 
                 <TextView
                     android:id="@+id/category"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/border2"
                     android:layout_margin="5dp"
                     android:text="This is a random category"
                     android:textColor="@color/cus_dgrey"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:layout_below="@+id/money" />
 
                 <View
                     android:id="@+id/border1"
@@ -414,40 +403,40 @@
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:layout_width="160dp"
-                            android:layout_height="120dp"
+                            android:layout_width="200dp"
+                            android:layout_height="160dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:src="@drawable/indoor_image_1"
                             android:scaleType="centerCrop"/>
 
                         <ImageView
-                            android:layout_width="160dp"
-                            android:layout_height="120dp"
+                            android:layout_width="200dp"
+                            android:layout_height="160dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:src="@drawable/indoor_image_2"
                             android:scaleType="centerCrop"/>
 
                         <ImageView
-                            android:layout_width="160dp"
-                            android:layout_height="120dp"
+                            android:layout_width="200dp"
+                            android:layout_height="160dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:src="@drawable/indoor_image_3"
                             android:scaleType="centerCrop"/>
 
                         <ImageView
-                            android:layout_width="160dp"
-                            android:layout_height="120dp"
+                            android:layout_width="200dp"
+                            android:layout_height="160dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:src="@drawable/indoor_image_4"
                             android:scaleType="centerCrop"/>
 
                         <ImageView
-                            android:layout_width="160dp"
-                            android:layout_height="120dp"
+                            android:layout_width="200dp"
+                            android:layout_height="160dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:src="@drawable/indoor_image_5"
@@ -479,9 +468,95 @@
                 android:padding="10dp">
 
                 <TextView
+                    android:id="@+id/lbl_comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_comments"
+                    android:paddingBottom="10dp"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_below="@+id/lbl_comments"
+                    android:id="@+id/comment1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/large_text" />
+                    android:text="@string/comment1" />
+
+                <View
+                    android:id="@+id/hr_view1"
+                    android:layout_below="@+id/comment1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/cus_grey" />
+
+                <TextView
+                    android:layout_below="@+id/comment1"
+                    android:id="@+id/comment2"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/comment2" />
+
+                <View
+                    android:id="@+id/hr_view2"
+                    android:layout_below="@+id/comment2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/cus_grey" />
+
+                <TextView
+                    android:layout_below="@+id/hr_view2"
+                    android:id="@+id/comment3"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/comment3" />
+
+                <View
+                    android:id="@+id/hr_view3"
+                    android:layout_below="@+id/comment3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/cus_grey" />
+
+                <TextView
+                    android:layout_below="@+id/hr_view3"
+                    android:id="@+id/comment4"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/comment4" />
+
+                <View
+                    android:id="@+id/hr_view4"
+                    android:layout_below="@+id/comment4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/cus_grey" />
+
+                <TextView
+                    android:layout_below="@+id/hr_view4"
+                    android:id="@+id/comment5"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/comment5" />
 
             </RelativeLayout>
 

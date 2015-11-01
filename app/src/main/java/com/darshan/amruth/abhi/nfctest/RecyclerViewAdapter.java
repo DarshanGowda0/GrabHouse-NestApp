@@ -75,7 +75,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private void setData(final Holder holder, int position) {
 
-        holder.priceTv.setText("Rs."+fetchData.dataList.get(position).price);
+        String rentCost = context.getResources().getString(R.string.Rs) + fetchData.dataList.get(position).price;
+        holder.priceTv.setText(rentCost);
         holder.ratingTv.setText(fetchData.dataList.get(position).rating);
         holder.addressTv.setText(fetchData.dataList.get(position).address);
         holder.categoryTv.setText(fetchData.dataList.get(position).category);
