@@ -112,7 +112,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="24sp"
-                                android:textColor="@color/cus_gold"
+                                android:textColor="@color/cus_dgrey"
                                 android:text="{fa-sitemap}"/>
 
                         </LinearLayout>
@@ -154,8 +154,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="24sp"
-                                android:textColor="@color/cus_gold"
-                                android:text="{fa-sitemap}"/>
+                                android:textColor="@color/cus_dgrey"
+                                android:text="{fa-shield}"/>
 
                         </LinearLayout>
 
