@@ -622,6 +622,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             card_view:cardCornerRadius="2dp"
+            card_view:cardBackgroundColor="@color/call_bg_color"
             android:layout_below="@+id/card_view5"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -631,15 +632,17 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp">
+                android:layout_gravity="center"
+                android:padding="20dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="CONTACT OWNER"
                     android:layout_margin="5dp"
+                    android:gravity="center"
                     android:id="@+id/lbl_contact"
-                    android:textColor="@color/cus_dgrey"
+                    android:textColor="@color/cus_white"
                     android:textSize="12sp"/>
 
                 <TextView
@@ -647,19 +650,22 @@
                     android:layout_height="wrap_content"
                     android:text="G. Balguruswamy"
                     android:layout_margin="10dp"
+                    android:gravity="center"
                     android:layout_below="@+id/lbl_contact"
                     android:id="@+id/contact"
-                    android:textColor="@color/cus_dgrey"
+                    android:textColor="@color/cus_white"
                     android:textSize="20sp"/>
 
                 <com.joanzapata.iconify.widget.IconTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="{fa-phone} +91-9742934099"
+                    android:text="{fa-phone} +91 97429 34099"
                     android:layout_marginTop="5dp"
                     android:layout_below="@+id/contact"
-                    android:textColor="@color/cus_black"
-                    android:textSize="30sp"/>
+                    android:layout_gravity="center"
+                    android:textColor="@color/cus_white"
+                    android:textSize="30sp"
+                    android:layout_centerHorizontal="true" />
 
             </RelativeLayout>
 
