@@ -95,48 +95,90 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
+                    android:baselineAligned="false"
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:baselineAligned="false"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="BUILT UP AREA"
-                            android:textColor="@color/cus_dgrey"
-                            android:textSize="10sp" />
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                            <com.joanzapata.iconify.widget.IconTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="24sp"
+                                android:textColor="@color/cus_gold"
+                                android:text="{fa-sitemap}"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:text="800 sq.ft"
-                            android:textColor="@color/cus_black"
-                            android:textSize="20sp" />
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="BUILT UP AREA"
+                                android:textColor="@color/cus_dgrey"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="800 sq.ft"
+                                android:textColor="@color/cus_black"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="SECURITY"
-                            android:textColor="@color/cus_dgrey"
-                            android:textSize="10sp" />
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                            <com.joanzapata.iconify.widget.IconTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="24sp"
+                                android:textColor="@color/cus_gold"
+                                android:text="{fa-sitemap}"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:text="Rs. 1.40L"
-                            android:textColor="@color/cus_black"
-                            android:textSize="20sp" />
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="SECURITY"
+                                android:textColor="@color/cus_dgrey"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Rs. 1.40L"
+                                android:textColor="@color/cus_black"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -158,20 +200,20 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="AVAILABLE FROM"
                             android:textColor="@color/cus_dgrey"
                             android:textSize="10sp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="Dec 2015"
                             android:textColor="@color/cus_black"
@@ -179,20 +221,20 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="ADDED"
                             android:textColor="@color/cus_dgrey"
                             android:textSize="10sp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="8 Months ago"
                             android:textColor="@color/cus_black"
@@ -217,20 +259,20 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="FACING"
                             android:textColor="@color/cus_dgrey"
                             android:textSize="10sp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="East"
                             android:textColor="@color/cus_black"
@@ -238,20 +280,20 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="RESTRICTIONS"
                             android:textColor="@color/cus_dgrey"
                             android:textSize="10sp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="None"
                             android:textColor="@color/cus_black"
@@ -277,20 +319,20 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="BATHROOMS"
                             android:textColor="@color/cus_dgrey"
                             android:textSize="10sp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="2"
                             android:textColor="@color/cus_black"
@@ -298,20 +340,20 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="FLOOR"
                             android:textColor="@color/cus_dgrey"
                             android:textSize="10sp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="2nd of 5 floors"
                             android:textColor="@color/cus_black"
@@ -565,7 +607,6 @@
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
-
 
     </RelativeLayout>
 
