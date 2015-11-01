@@ -115,9 +115,9 @@ public class RecieveKeyListener extends AppCompatActivity {
                 String link = jsonObject.getString("link");
                 try {
                     int passcode = jsonObject.getInt("passcode");
-
+                    String pass = ""+passcode;
                     Log.d("passcode", passcode + "");
-                    editor.putInt("passcode", passcode);
+                    editor.putString("passcode",pass);
                     editor.apply();
                     return true;
                 } catch (JSONException e) {
