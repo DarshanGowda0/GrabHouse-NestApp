@@ -517,24 +517,16 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp">
 
-                <TextView
-                    android:id="@+id/lbl_comments"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lbl_comments"
-                    android:paddingBottom="10dp"
-                    android:textSize="12sp"/>
-
                 <LinearLayout
                     android:orientation="horizontal"
                     android:id="@+id/linLay1"
-                    android:layout_below="@+id/lbl_comments"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
                         android:src="@drawable/profile_photo_1"/>
 
                     <TextView
@@ -543,6 +535,7 @@
                         android:layout_height="wrap_content"
                         android:paddingStart="10dp"
                         android:paddingLeft="10dp"
+                        android:lineSpacingExtra="4dp"
                         android:text="@string/comment1" />
 
                 </LinearLayout>
@@ -568,6 +561,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
                         android:src="@drawable/profile_photo_1"/>
 
                     <TextView
@@ -576,6 +570,7 @@
                         android:layout_height="wrap_content"
                         android:paddingStart="10dp"
                         android:paddingLeft="10dp"
+                        android:lineSpacingExtra="4dp"
                         android:text="@string/comment2" />
 
                 </LinearLayout>
@@ -601,6 +596,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
                         android:src="@drawable/profile_photo_1"/>
 
                     <TextView
@@ -609,6 +605,7 @@
                         android:layout_height="wrap_content"
                         android:paddingStart="10dp"
                         android:paddingLeft="10dp"
+                        android:lineSpacingExtra="4dp"
                         android:text="@string/comment3" />
 
                 </LinearLayout>

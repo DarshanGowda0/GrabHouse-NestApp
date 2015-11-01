@@ -3,15 +3,11 @@
     <string name="action_settings">Key Status</string>
     <string name="facebook_app_id">1209915219035235</string>
     <string name="title_activity_house_details">House Details</string>
-    <string name="lbl_comments"><b>COMMENTS</b></string>
-    <string name="comment1">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus.\n\t<i>By <b>Amruth A. Pillai</b></i>"
+    <string name="comment1">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus.\n<i>By <b>Amruth A. Pillai</b></i>"
     </string>
-    <string name="comment2">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus.\n\t<i>By <b>Darshan N.</b></i>"
+    <string name="comment2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus.\n<i>By <b>Darshan N.</b></i>"
     </string>
-    <string name="comment3">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus.\n\t<i>By <b>Abhishek Kori</b></i>"
+    <string name="comment3">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus.\n<i>By <b>Abhishek Kori</b></i>"
     </string>
     <string name="lock_status">Key Lock Status</string>
     <string name="title_activity_maps">Map</string>
