@@ -84,7 +84,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
+                        android:textSize="22sp"
                         android:textColor="@color/cus_gold"
                         android:text="{fa-star}"/>
 
@@ -95,7 +95,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/rating"
                         android:text="4.5"
-                        android:textSize="14dp"
+                        android:textSize="14sp"
                         android:textColor="@color/cus_dgrey" />
 
                 </RelativeLayout>
