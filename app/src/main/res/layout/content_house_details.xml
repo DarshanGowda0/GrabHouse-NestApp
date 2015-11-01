@@ -653,7 +653,7 @@
                     android:textSize="20sp"/>
 
                 <com.joanzapata.iconify.widget.IconTextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="{fa-phone} +91-9742934099"
                     android:layout_marginTop="5dp"
