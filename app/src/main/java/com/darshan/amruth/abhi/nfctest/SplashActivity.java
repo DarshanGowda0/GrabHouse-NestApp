@@ -49,14 +49,14 @@ public class SplashActivity extends AppCompatActivity {
                         Intent i = new Intent(getApplicationContext(), AuthActivity.class);
                         startActivity(i);
                         finish();
-                        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                        //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     } else {
                         Log.d("darshan", "going to Houses");
 
                         Intent i = new Intent(getApplicationContext(), HousesActivity.class);
                         startActivity(i);
                         finish();
-                        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                        //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     }
                 }
 
