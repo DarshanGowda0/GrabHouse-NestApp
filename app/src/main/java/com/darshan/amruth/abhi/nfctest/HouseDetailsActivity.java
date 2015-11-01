@@ -100,6 +100,11 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
             startActivity(in);
             return true;
         }
+        if(id==R.id.open){
+            Intent in = new Intent(HouseDetailsActivity.this,KeySenderActivity.class);
+            startActivity(in);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }

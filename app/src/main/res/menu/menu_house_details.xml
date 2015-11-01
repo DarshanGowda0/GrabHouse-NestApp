@@ -7,6 +7,12 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="Check Keys"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/open"
+        android:orderInCategory="100"
+        android:title="Open key"
+        app:showAsAction="always" />
 
 </menu>

@@ -139,6 +139,10 @@ public class KeyReceiverActivity extends Activity {
             if(RecievedString.equals(""+passcode)){
                 keyStatus.setImageResource(R.drawable.lock_open);
                 Toast.makeText(getApplicationContext(),"lock opened successfully",Toast.LENGTH_SHORT).show();
+            }else{
+                keyStatus.setImageResource(R.drawable.lock);
+                Toast.makeText(getApplicationContext(),"lock cannot be opened",Toast.LENGTH_SHORT).show();
+
             }
         }
     }
