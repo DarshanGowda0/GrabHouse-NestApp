@@ -31,10 +31,11 @@ public class checkKeys extends AsyncTask<String, Void, Boolean> {
     SharedPreferences.Editor editor;
 
     public checkKeys(Context con, ImageView keyStatus) {
-        this.keyStatus = keyStatus;
+
         context = con;
         sharedPreferences = context.getSharedPreferences("SignIn",Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
+
     }
 
     @Override
