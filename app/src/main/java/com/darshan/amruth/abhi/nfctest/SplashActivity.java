@@ -15,6 +15,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.joanzapata.iconify.Iconify;
+import com.joanzapata.iconify.fonts.FontAwesomeModule;
+
 public class SplashActivity extends AppCompatActivity {
 
     public static String LOGGED_IN = "LoggedIn";
@@ -23,6 +26,8 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        Iconify.with(new FontAwesomeModule());
 
         new Handler().postDelayed(new Runnable() {
 

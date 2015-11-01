@@ -70,7 +70,7 @@
                     android:textSize="12dp" />
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_alignParentRight="true"
@@ -81,13 +81,22 @@
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp">
 
+                    <com.joanzapata.iconify.widget.IconTextView
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/cus_gold"
+                        android:text="{fa-star}"/>
+
                     <TextView
+                        android:layout_alignParentRight="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/rating"
                         android:text="4.5"
                         android:textSize="14dp"
-                        android:textColor="@color/cus_lblue" />
+                        android:textColor="@color/cus_dgrey" />
 
                 </RelativeLayout>
 
