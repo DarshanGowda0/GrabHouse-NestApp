@@ -1,5 +1,6 @@
 package com.darshan.amruth.abhi.nfctest;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,9 +9,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Handler;
 import android.provider.Settings;
-import android.support.v7.app.AlertDialog;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -37,11 +40,14 @@ public class SplashActivity extends AppCompatActivity {
                     callDialog();
                 } else {
                     if (check == 0) {
+                        Log.d("darshan", "going to auth");
                         Intent i = new Intent(getApplicationContext(), AuthActivity.class);
                         startActivity(i);
                         finish();
                         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                     } else {
+                        Log.d("darshan", "going to Houses");
+
                         Intent i = new Intent(getApplicationContext(), HousesActivity.class);
                         startActivity(i);
                         finish();
@@ -50,7 +56,7 @@ public class SplashActivity extends AppCompatActivity {
                 }
 
                 // close this activity
-                finish();
+//                finish();
             }
         }, 2000);
     }
@@ -73,6 +79,8 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void callDialog() {
+        Log.d("darshan", "inside call dialog");
+
         new AlertDialog.Builder(this).setTitle("Warning!").setMessage("Not connected to Internet")
                 .setPositiveButton("Settings", new DialogInterface.OnClickListener() {
                     @Override
@@ -81,12 +89,15 @@ public class SplashActivity extends AppCompatActivity {
 //                        intent.setClassName("com.android.phone", "com.android.phone.NetworkSetting");
                         startActivity(intent);
                     }
-                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                SplashActivity.this.finish();
-            }
-        }).setCancelable(false).show();
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        SplashActivity.this.finish();
+                    }
+                }).setCancelable(false).show();
+
+
     }
 
 

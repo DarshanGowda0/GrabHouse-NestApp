@@ -23,6 +23,7 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
     private GoogleMap mMap;
     TextView price, category, address,address2;
     ImageView houseImage;
+    int pos;
 
 
     @Override
@@ -43,8 +44,8 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                new requestKey(HouseDetailsActivity.this,fetchData.dataList.get(pos).id,view).execute();
+
             }
         });
     }
@@ -57,7 +58,7 @@ public class HouseDetailsActivity extends AppCompatActivity implements OnMapRead
         address2 = (TextView) findViewById(R.id.addressTv2);
         houseImage = (ImageView) findViewById(R.id.houseImageBig);
         Intent in = getIntent();
-        int pos = in.getIntExtra("position",0);
+        pos = in.getIntExtra("position",0);
 
         price.setText("Rs."+fetchData.dataList.get(pos).price);
         category.setText(fetchData.dataList.get(pos).category);

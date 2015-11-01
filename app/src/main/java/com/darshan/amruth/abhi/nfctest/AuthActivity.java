@@ -34,6 +34,7 @@ public class AuthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_auth);
+        Log.d("darshan", "inside of auth");
 
         preferences = getSharedPreferences("SignIn", Context.MODE_PRIVATE);
         editor = preferences.edit();

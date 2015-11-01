@@ -48,14 +48,12 @@ public class fetchData extends AsyncTask<String, Void, Boolean> {
         super.onPostExecute(aBoolean);
         HousesActivity.recyclerViewAdapter.notifyDataSetChanged();
         progressDialog.dismiss();
-//        MainActivity.progressLayout.setVisibility(View.GONE);
     }
 
     public static ArrayList<DataClass> list = new ArrayList<>();
 
     @Override
     protected Boolean doInBackground(String... params) {
-        //get the url of zoomcar api
 
         URL url;
         HttpURLConnection urlConnection = null;
