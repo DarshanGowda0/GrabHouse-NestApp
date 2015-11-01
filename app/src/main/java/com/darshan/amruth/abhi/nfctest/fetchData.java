@@ -46,7 +46,7 @@ public class fetchData extends AsyncTask<String, Void, Boolean> {
     @Override
     protected void onPostExecute(Boolean aBoolean) {
         super.onPostExecute(aBoolean);
-        HousesActivity.recyclerViewAdapter.notifyDataSetChanged();
+        HousesActivity.slideInBottomAnimationAdapter.notifyDataSetChanged();
         progressDialog.dismiss();
     }
 
