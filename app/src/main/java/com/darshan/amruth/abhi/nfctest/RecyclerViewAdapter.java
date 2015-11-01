@@ -81,7 +81,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.addressTv.setText(fetchData.dataList.get(position).address);
         holder.categoryTv.setText(fetchData.dataList.get(position).category);
 //        imageLoader.displayImage(fetchData.dataList.get(position).image, (ImageAware) holder.imageLayout, defaultOptions);
-        imageLoader.loadImage("http://84.200.84.218/grab/images/"+fetchData.dataList.get(position).image, new SimpleImageLoadingListener() {
+        imageLoader.loadImage("http://84.200.84.218/grab/imagesa/"+fetchData.dataList.get(position).image, new SimpleImageLoadingListener() {
             @Override
             public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
                 // Do whatever you want with Bitmap
