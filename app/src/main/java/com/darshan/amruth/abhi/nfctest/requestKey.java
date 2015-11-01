@@ -1,5 +1,6 @@
 package com.darshan.amruth.abhi.nfctest;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -28,6 +29,8 @@ public class requestKey extends AsyncTask<Void, Void, Void> {
     public static String HOME_ID = "house_id", USER_ID = "fbid", USER_NAME = "fbname", USER_LINK = "fblink";
     View view;
 
+    ProgressDialog progressDialog;
+
 
     public requestKey(Context context, String Home_id, View view) {
         this.context = context;
@@ -42,6 +45,7 @@ public class requestKey extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
+
         Snackbar.make(view, "requesting key", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
     }
