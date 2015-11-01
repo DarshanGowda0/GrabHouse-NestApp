@@ -5,19 +5,13 @@
     <string name="title_activity_house_details">House Details</string>
     <string name="lbl_comments"><b>COMMENTS</b></string>
     <string name="comment1">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus. Proin sollicitudin consequat dui, in molestie mi tempus ut.\n\t<i>By <b>Amruth A. Pillai</b></i>"
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus.\n\t<i>By <b>Amruth A. Pillai</b></i>"
     </string>
     <string name="comment2">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus. Proin sollicitudin consequat dui, in molestie mi tempus ut.\n\t<i>By <b>Darshan N.</b></i>"
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus.\n\t<i>By <b>Darshan N.</b></i>"
     </string>
     <string name="comment3">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus. Proin sollicitudin consequat dui, in molestie mi tempus ut.\n\t<i>By <b>Abhishek Kori</b></i>"
-    </string>
-    <string name="comment4">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus. Proin sollicitudin consequat dui, in molestie mi tempus ut.\n\t<i>By <b>Rohan Kumar</b></i>"
-    </string>
-    <string name="comment5">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus. Proin sollicitudin consequat dui, in molestie mi tempus ut.\n\t<i>By <b>Someone Special</b></i>"
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non malesuada ante. Phasellus est massa, vehicula ut ipsum at, feugiat maximus purus.\n\t<i>By <b>Abhishek Kori</b></i>"
     </string>
     <string name="lock_status">Key Lock Status</string>
     <string name="title_activity_maps">Map</string>
