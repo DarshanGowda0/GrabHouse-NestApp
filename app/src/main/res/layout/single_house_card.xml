@@ -81,16 +81,9 @@
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp">
 
-                    <com.joanzapata.iconify.widget.IconTextView
-                        android:layout_alignParentLeft="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:textColor="@color/cus_gold"
-                        android:text="{fa-star}"/>
-
                     <TextView
                         android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/rating"
