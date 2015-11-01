@@ -652,10 +652,10 @@
                     android:textColor="@color/cus_dgrey"
                     android:textSize="20sp"/>
 
-                <TextView
+                <com.joanzapata.iconify.widget.IconTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="+91-9742934099"
+                    android:text="{fa-phone} +91-9742934099"
                     android:layout_marginTop="5dp"
                     android:layout_below="@+id/contact"
                     android:textColor="@color/cus_black"
