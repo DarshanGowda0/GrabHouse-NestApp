@@ -636,11 +636,21 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="CONTACT OWNER"
+                    android:layout_margin="5dp"
+                    android:id="@+id/lbl_contact"
+                    android:textColor="@color/cus_dgrey"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="G. Balguruswamy"
-                    android:layout_marginTop="5dp"
+                    android:layout_margin="10dp"
+                    android:layout_below="@+id/lbl_contact"
                     android:id="@+id/contact"
-                    android:textColor="@color/cus_grey"
-                    android:textSize="15sp"/>
+                    android:textColor="@color/cus_dgrey"
+                    android:textSize="20sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -648,8 +658,8 @@
                     android:text="+91-9742934099"
                     android:layout_marginTop="5dp"
                     android:layout_below="@+id/contact"
-                    android:textColor="@color/cus_dgrey"
-                    android:textSize="20sp"/>
+                    android:textColor="@color/cus_black"
+                    android:textSize="30sp"/>
 
             </RelativeLayout>
 
